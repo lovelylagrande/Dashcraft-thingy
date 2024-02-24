@@ -1,5 +1,7 @@
 const banlist = ["SkyRacer99", "-DTG-Dusty.", "1stPeenuut", "game_oversight", "-MrY-", "decky12582"];
 
+import ALLTRACKIDS from "./alltracks.json" assert {type: 'json'};
+
 function main() {
   ID = document.getElementById("IDinput").value;
   ID = ID.replaceAll("/", "");
@@ -159,6 +161,7 @@ async function wrCount(countAll) {
       I += 1;
     }
   } else {
+    console.log("the new list thing: ", ALLTRACKIDS);
     IDarr = await fetch("https://dashcraft-thingy.lovelylagrande.repl.co/alltracks.json");
     IDarr = await IDarr.json();
   }
